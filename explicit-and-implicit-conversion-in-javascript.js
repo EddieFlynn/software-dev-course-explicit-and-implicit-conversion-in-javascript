@@ -17,16 +17,21 @@ Include at least one edge case, like NaN, undefined, or null .
 Use console.log() to clearly show the before-and-after type conversions.
 
 */
+let subtractionAnswer = "54" - 50;
+console.log(subtractionAnswer);// implicit - expected 4
 
+let additionAnswer = Number("600") + 100;
+console.log(additionAnswer);// explicit - expected 700
 
-let result = "5" - 2;
+let result = Number("5") - 2;// Casted string to number
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+let isRaining = "false"
+let isValid = isRaining === "true";// removed cast because provided value was non-empty string. 
 if (isValid) {
     console.log("This is valid!");
 }
 
-let age = "25";
+let age = Number("25");//casted to number
 let totalAge = age + 5;
 console.log("Total Age: " + totalAge);
